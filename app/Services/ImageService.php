@@ -31,9 +31,7 @@ class ImageService
     public function deleteImageByUserId($userId , $image)
     {
    
-    $this->deleteFile($image->path);
-
-
+        $this->deleteFile($image->path);
         return $this->imageRepository->deleteByUserId($userId);
     }
 }
